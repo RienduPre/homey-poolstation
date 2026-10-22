@@ -6,10 +6,13 @@ Port van de [Home Assistant Poolstation-integratie](https://github.com/cibernox/
 
 ## Installeren
 
+De app heeft geen npm-afhankelijkheden; je hebt alleen de [Homey CLI](https://apps.developer.homey.app/the-basics/getting-started) nodig.
+
 ```bash
-npm install
-npm run images     # maakt de PNG-afbeeldingen die Homey nodig heeft
-homey app install  # of: homey app run
+npm install -g homey   # Homey CLI, eenmalig
+homey login            # eenmalig, opent de browser
+npm run images         # maakt de PNG-afbeeldingen die Homey nodig heeft
+homey app install      # of: homey app run (met live logs)
 ```
 
 ## Koppelen

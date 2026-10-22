@@ -1,0 +1,66 @@
+{
+  "id": "nl.riendupre.poolstation",
+  "version": "0.1.0",
+  "compatibility": ">=12.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Poolstation",
+    "nl": "Poolstation"
+  },
+  "description": {
+    "en": "Water temperature, pH, redox, chlorine and relays of your Poolstation pool controller in Homey",
+    "nl": "Watertemperatuur, pH, redox, chloor en relais van je Poolstation-zwembadregeling in Homey"
+  },
+  "category": [
+    "climate"
+  ],
+  "tags": {
+    "en": [
+      "poolstation",
+      "pool",
+      "swimming pool",
+      "fluidra",
+      "idegis",
+      "astralpool",
+      "chlorinator",
+      "ph"
+    ],
+    "nl": [
+      "poolstation",
+      "zwembad",
+      "fluidra",
+      "idegis",
+      "astralpool",
+      "zoutelektrolyse",
+      "ph",
+      "chloor"
+    ]
+  },
+  "permissions": [],
+  "brandColor": "#0E6BA8",
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Rien du Pré",
+    "email": "Rien.duPre@me.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Miguel Camba (Home Assistant integration and pypoolstation, MIT)"
+      }
+    ]
+  },
+  "homepage": "https://smart-energy-management.nl",
+  "support": "https://github.com/RienduPre/homey-poolstation/issues",
+  "source": "https://github.com/RienduPre/homey-poolstation",
+  "bugs": {
+    "url": "https://github.com/RienduPre/homey-poolstation/issues"
+  }
+}

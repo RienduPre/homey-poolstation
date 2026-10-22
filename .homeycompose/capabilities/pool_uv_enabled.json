@@ -1,0 +1,11 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "UV enabled",
+    "nl": "UV ingeschakeld"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/uv.svg"
+}

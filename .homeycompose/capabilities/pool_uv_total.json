@@ -1,0 +1,17 @@
+{
+  "type": "number",
+  "title": {
+    "en": "UV total hours",
+    "nl": "UV-uren totaal"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "h",
+    "nl": "u"
+  },
+  "decimals": 0,
+  "icon": "/assets/uv.svg"
+}

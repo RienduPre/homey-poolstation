@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Salt",
+    "nl": "Zout"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "g/l"
+  },
+  "decimals": 1,
+  "icon": "/assets/salt.svg"
+}

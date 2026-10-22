@@ -1,0 +1,6 @@
+{
+  "0.1.0": {
+    "en": "First version: pool values, targets, relays, digital inputs and UV from Poolstation, with two-factor login",
+    "nl": "Eerste versie: zwembadwaarden, streefwaarden, relais, digitale ingangen en UV uit Poolstation, met inloggen via inlogcode"
+  }
+}

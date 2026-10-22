@@ -1,0 +1,39 @@
+{
+  "pair": {
+    "pool": "Pool",
+    "login": {
+      "title": "Log in to Poolstation",
+      "intro": "Log in with the e-mail address and password of your Poolstation account (poolstation.net).",
+      "email": "E-mail address",
+      "password": "Password",
+      "code": "Login code",
+      "code_intro": "Poolstation sent a login code to your e-mail. Enter it below.",
+      "submit": "Log in",
+      "busy": "Logging in…",
+      "missing": "Enter your e-mail address and password"
+    }
+  },
+  "cap": {
+    "flow_alarm": "Water flow problem",
+    "uv_ballast_alarm": "UV ballast problem",
+    "uv_fuse_alarm": "UV fuse problem",
+    "input": "Digital input __n__"
+  },
+  "warning": {
+    "unreachable": "Poolstation is temporarily unreachable, showing the last known values"
+  },
+  "error": {
+    "not_logged_in": "Please log in first",
+    "login_failed": "Login failed: check your e-mail address and password",
+    "login_500": "Login failed. Poolstation answers a wrong e-mail address or password with a server error; please check your details.",
+    "code_invalid": "The login code is wrong or has expired",
+    "connection": "Poolstation is unreachable",
+    "no_pools": "No pools found in this Poolstation account",
+    "pool_not_in_account": "This pool does not belong to the account you logged in with",
+    "reauth": "Your Poolstation login has expired. Choose 'Repair' on the device to log in again.",
+    "reauth_2fa": "Poolstation asks for a login code. Choose 'Repair' on the device to log in again.",
+    "write_failed": "Changing the setting in Poolstation failed",
+    "not_supported": "This pool does not have this feature",
+    "relay_unknown": "This relay was not found in Poolstation"
+  }
+}

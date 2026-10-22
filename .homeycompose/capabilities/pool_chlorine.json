@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Free chlorine",
+    "nl": "Vrij chloor"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "ppm"
+  },
+  "decimals": 2,
+  "icon": "/assets/chlorine.svg"
+}

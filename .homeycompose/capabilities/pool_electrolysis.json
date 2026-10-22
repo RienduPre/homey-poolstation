@@ -1,0 +1,18 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Electrolysis",
+    "nl": "Elektrolyse"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "%"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 100,
+  "icon": "/assets/electrolysis.svg"
+}

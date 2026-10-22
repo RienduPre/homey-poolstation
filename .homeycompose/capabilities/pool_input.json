@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Digital input",
+    "nl": "Digitale ingang"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "Input on",
+    "nl": "Ingang aan"
+  },
+  "insightsTitleFalse": {
+    "en": "Input off",
+    "nl": "Ingang uit"
+  },
+  "icon": "/assets/input.svg"
+}

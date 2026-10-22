@@ -1,0 +1,81 @@
+<style>
+  .ps-intro { margin-bottom: 16px; }
+  .ps-error { color: var(--homey-color-red-500, #e5382a); margin-top: 12px; min-height: 1.2em; }
+  .ps-hidden { display: none; }
+</style>
+
+<form id="ps-form" class="homey-form" novalidate>
+  <p id="ps-intro" class="homey-subtitle ps-intro"></p>
+
+  <div class="homey-form-group">
+    <label class="homey-form-label" for="ps-username" id="ps-username-label"></label>
+    <input class="homey-form-input" id="ps-username" type="email" autocomplete="username" placeholder="you@example.com" />
+  </div>
+
+  <div class="homey-form-group">
+    <label class="homey-form-label" for="ps-password" id="ps-password-label"></label>
+    <input class="homey-form-input" id="ps-password" type="password" autocomplete="current-password" />
+  </div>
+
+  <div class="homey-form-group ps-hidden" id="ps-code-group">
+    <label class="homey-form-label" for="ps-code" id="ps-code-label"></label>
+    <input class="homey-form-input" id="ps-code" type="text" inputmode="numeric" autocomplete="one-time-code" />
+  </div>
+
+  <button class="homey-button-primary-full" type="submit" id="ps-submit"></button>
+  <p class="ps-error" id="ps-error"></p>
+</form>
+
+<script type="application/javascript">
+  // Copy of pair/login.html; only REPAIR differs.
+  var REPAIR = true;
+
+  (function () {
+    var form = document.getElementById('ps-form');
+    var user = document.getElementById('ps-username');
+    var pass = document.getElementById('ps-password');
+    var code = document.getElementById('ps-code');
+    var codeGroup = document.getElementById('ps-code-group');
+    var submit = document.getElementById('ps-submit');
+    var errorEl = document.getElementById('ps-error');
+    var intro = document.getElementById('ps-intro');
+
+    Homey.setTitle(Homey.__('pair.login.title'));
+    intro.textContent = Homey.__('pair.login.intro');
+    document.getElementById('ps-username-label').textContent = Homey.__('pair.login.email');
+    document.getElementById('ps-password-label').textContent = Homey.__('pair.login.password');
+    document.getElementById('ps-code-label').textContent = Homey.__('pair.login.code');
+    submit.textContent = Homey.__('pair.login.submit');
+
+    function setBusy(busy) {
+      submit.disabled = busy;
+      submit.textContent = Homey.__(busy ? 'pair.login.busy' : 'pair.login.submit');
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      errorEl.textContent = '';
+      if (!user.value.trim() || !pass.value) {
+        errorEl.textContent = Homey.__('pair.login.missing');
+        return;
+      }
+      setBusy(true);
+      Homey.emit('login', { username: user.value.trim(), password: pass.value, code: code.value.trim() })
+        .then(function (result) {
+          setBusy(false);
+          if (result && result.needsCode) {
+            codeGroup.classList.remove('ps-hidden');
+            intro.textContent = Homey.__('pair.login.code_intro');
+            code.focus();
+            return;
+          }
+          if (REPAIR) Homey.done();
+          else Homey.showView('list_devices');
+        })
+        .catch(function (err) {
+          setBusy(false);
+          errorEl.textContent = (err && err.message) || String(err);
+        });
+    });
+  })();
+</script>

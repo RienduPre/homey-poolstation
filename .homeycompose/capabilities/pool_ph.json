@@ -1,0 +1,13 @@
+{
+  "type": "number",
+  "title": {
+    "en": "pH",
+    "nl": "pH"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "decimals": 2,
+  "icon": "/assets/ph.svg"
+}

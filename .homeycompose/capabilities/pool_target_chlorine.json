@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Target chlorine",
+    "nl": "Gewenst chloor"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": true,
+  "uiComponent": "slider",
+  "units": {
+    "en": "ppm"
+  },
+  "min": 0.3,
+  "max": 3.5,
+  "step": 0.01,
+  "decimals": 2,
+  "icon": "/assets/chlorine.svg"
+}

@@ -1,0 +1,84 @@
+{
+  "name": {
+    "en": "Pool",
+    "nl": "Zwembad"
+  },
+  "class": "other",
+  "capabilities": [
+    "measure_temperature",
+    "pool_ph",
+    "pool_target_ph"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "login"
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "login"
+    }
+  ],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Connection",
+        "nl": "Verbinding"
+      },
+      "children": [
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "value": 60,
+          "min": 30,
+          "max": 3600,
+          "step": 1,
+          "units": {
+            "en": "s",
+            "nl": "s"
+          },
+          "label": {
+            "en": "Update interval",
+            "nl": "Verversinterval"
+          },
+          "hint": {
+            "en": "How often the pool values are read from Poolstation (minimum 30 seconds).",
+            "nl": "Hoe vaak de zwembadwaarden bij Poolstation worden opgehaald (minimaal 30 seconden)."
+          }
+        },
+        {
+          "id": "pool_id",
+          "type": "label",
+          "value": "",
+          "label": {
+            "en": "Pool ID",
+            "nl": "Zwembad-ID"
+          }
+        }
+      ]
+    }
+  ]
+}

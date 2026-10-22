@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Target production",
+    "nl": "Gewenste productie"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": true,
+  "uiComponent": "slider",
+  "units": {
+    "en": "%"
+  },
+  "min": 0,
+  "max": 100,
+  "step": 1,
+  "decimals": 0,
+  "icon": "/assets/electrolysis.svg"
+}

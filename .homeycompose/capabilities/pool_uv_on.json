@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "UV lamp on",
+    "nl": "UV-lamp aan"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "UV lamp on",
+    "nl": "UV-lamp aan"
+  },
+  "insightsTitleFalse": {
+    "en": "UV lamp off",
+    "nl": "UV-lamp uit"
+  },
+  "icon": "/assets/uv.svg"
+}

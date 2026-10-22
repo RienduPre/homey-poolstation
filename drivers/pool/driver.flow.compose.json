@@ -1,0 +1,474 @@
+{
+  "triggers": [
+    {
+      "id": "relay_turned_on",
+      "title": {
+        "en": "A relay turned on",
+        "nl": "Een relais ging aan"
+      },
+      "titleFormatted": {
+        "en": "[[relay]] turned on",
+        "nl": "[[relay]] ging aan"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "relay",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "placeholder": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "name": "relay",
+          "type": "string",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "example": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "relay_turned_off",
+      "title": {
+        "en": "A relay turned off",
+        "nl": "Een relais ging uit"
+      },
+      "titleFormatted": {
+        "en": "[[relay]] turned off",
+        "nl": "[[relay]] ging uit"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "relay",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "placeholder": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "name": "relay",
+          "type": "string",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "example": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "input_turned_on",
+      "title": {
+        "en": "A digital input turned on",
+        "nl": "Een digitale ingang ging aan"
+      },
+      "titleFormatted": {
+        "en": "[[input]] turned on",
+        "nl": "[[input]] ging aan"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "input",
+          "title": {
+            "en": "Input",
+            "nl": "Ingang"
+          },
+          "placeholder": {
+            "en": "Digital input 1",
+            "nl": "Digitale ingang 1"
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "name": "input",
+          "type": "string",
+          "title": {
+            "en": "Input",
+            "nl": "Ingang"
+          },
+          "example": {
+            "en": "Pool cover",
+            "nl": "Zwembaddek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "input_turned_off",
+      "title": {
+        "en": "A digital input turned off",
+        "nl": "Een digitale ingang ging uit"
+      },
+      "titleFormatted": {
+        "en": "[[input]] turned off",
+        "nl": "[[input]] ging uit"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "input",
+          "title": {
+            "en": "Input",
+            "nl": "Ingang"
+          },
+          "placeholder": {
+            "en": "Digital input 1",
+            "nl": "Digitale ingang 1"
+          }
+        }
+      ],
+      "tokens": [
+        {
+          "name": "input",
+          "type": "string",
+          "title": {
+            "en": "Input",
+            "nl": "Ingang"
+          },
+          "example": {
+            "en": "Pool cover",
+            "nl": "Zwembaddek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flow_alarm_on",
+      "$filter": "capabilities=alarm_generic.flow",
+      "title": {
+        "en": "Water flow problem started",
+        "nl": "Waterstroomprobleem begonnen"
+      }
+    },
+    {
+      "id": "flow_alarm_off",
+      "$filter": "capabilities=alarm_generic.flow",
+      "title": {
+        "en": "Water flow problem resolved",
+        "nl": "Waterstroomprobleem opgelost"
+      }
+    },
+    {
+      "id": "ph_changed",
+      "$filter": "capabilities=pool_ph",
+      "title": {
+        "en": "The pH changed",
+        "nl": "De pH is veranderd"
+      },
+      "tokens": [
+        {
+          "name": "ph",
+          "type": "number",
+          "title": {
+            "en": "pH",
+            "nl": "pH"
+          },
+          "example": 7.2
+        }
+      ]
+    },
+    {
+      "id": "orp_changed",
+      "$filter": "capabilities=pool_orp",
+      "title": {
+        "en": "The ORP changed",
+        "nl": "De redox is veranderd"
+      },
+      "tokens": [
+        {
+          "name": "orp",
+          "type": "number",
+          "title": {
+            "en": "ORP (mV)",
+            "nl": "Redox (mV)"
+          },
+          "example": 720
+        }
+      ]
+    },
+    {
+      "id": "chlorine_changed",
+      "$filter": "capabilities=pool_chlorine",
+      "title": {
+        "en": "The chlorine level changed",
+        "nl": "Het chloorgehalte is veranderd"
+      },
+      "tokens": [
+        {
+          "name": "chlorine",
+          "type": "number",
+          "title": {
+            "en": "Chlorine (ppm)",
+            "nl": "Chloor (ppm)"
+          },
+          "example": 1.2
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "relay_is_on",
+      "title": {
+        "en": "Relay !{{is|is not}} on",
+        "nl": "Relais !{{is|is niet}} aan"
+      },
+      "titleFormatted": {
+        "en": "[[relay]] !{{is|is not}} on",
+        "nl": "[[relay]] !{{is|is niet}} aan"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "relay",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "placeholder": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        }
+      ]
+    },
+    {
+      "id": "input_is_on",
+      "title": {
+        "en": "Digital input !{{is|is not}} on",
+        "nl": "Digitale ingang !{{is|is niet}} aan"
+      },
+      "titleFormatted": {
+        "en": "[[input]] !{{is|is not}} on",
+        "nl": "[[input]] !{{is|is niet}} aan"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "input",
+          "title": {
+            "en": "Input",
+            "nl": "Ingang"
+          },
+          "placeholder": {
+            "en": "Digital input 1",
+            "nl": "Digitale ingang 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flow_alarm_active",
+      "$filter": "capabilities=alarm_generic.flow",
+      "title": {
+        "en": "There !{{is|is no}} water flow problem",
+        "nl": "Er !{{is|is geen}} waterstroomprobleem"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "set_relay",
+      "title": {
+        "en": "Switch a relay",
+        "nl": "Schakel een relais"
+      },
+      "titleFormatted": {
+        "en": "Switch [[relay]] [[state]]",
+        "nl": "Zet [[relay]] [[state]]"
+      },
+      "args": [
+        {
+          "type": "autocomplete",
+          "name": "relay",
+          "title": {
+            "en": "Relay",
+            "nl": "Relais"
+          },
+          "placeholder": {
+            "en": "Filter pump",
+            "nl": "Filterpomp"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "state",
+          "title": {
+            "en": "State",
+            "nl": "Stand"
+          },
+          "values": [
+            {
+              "id": "on",
+              "label": {
+                "en": "on",
+                "nl": "aan"
+              }
+            },
+            {
+              "id": "off",
+              "label": {
+                "en": "off",
+                "nl": "uit"
+              }
+            },
+            {
+              "id": "toggle",
+              "label": {
+                "en": "toggle",
+                "nl": "om"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "set_target_ph",
+      "$filter": "capabilities=pool_target_ph",
+      "title": {
+        "en": "Set target pH",
+        "nl": "Gewenste pH instellen"
+      },
+      "titleFormatted": {
+        "en": "Set target pH to [[value]]",
+        "nl": "Zet gewenste pH op [[value]]"
+      },
+      "args": [
+        {
+          "type": "number",
+          "name": "value",
+          "min": 6,
+          "max": 8,
+          "step": 0.01,
+          "placeholder": {
+            "en": "7.2",
+            "nl": "7.2"
+          },
+          "title": {
+            "en": "pH",
+            "nl": "pH"
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_target_orp",
+      "$filter": "capabilities=pool_target_orp",
+      "title": {
+        "en": "Set target ORP",
+        "nl": "Gewenste redox instellen"
+      },
+      "titleFormatted": {
+        "en": "Set target ORP to [[value]] mV",
+        "nl": "Zet gewenste redox op [[value]] mV"
+      },
+      "args": [
+        {
+          "type": "number",
+          "name": "value",
+          "min": 600,
+          "max": 850,
+          "step": 1,
+          "placeholder": {
+            "en": "720",
+            "nl": "720"
+          },
+          "title": {
+            "en": "ORP (mV)",
+            "nl": "Redox (mV)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_target_chlorine",
+      "$filter": "capabilities=pool_target_chlorine",
+      "title": {
+        "en": "Set target chlorine",
+        "nl": "Gewenst chloor instellen"
+      },
+      "titleFormatted": {
+        "en": "Set target chlorine to [[value]] ppm",
+        "nl": "Zet gewenst chloor op [[value]] ppm"
+      },
+      "args": [
+        {
+          "type": "number",
+          "name": "value",
+          "min": 0.3,
+          "max": 3.5,
+          "step": 0.01,
+          "placeholder": {
+            "en": "1.0",
+            "nl": "1.0"
+          },
+          "title": {
+            "en": "Chlorine (ppm)",
+            "nl": "Chloor (ppm)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_target_production",
+      "$filter": "capabilities=pool_target_production",
+      "title": {
+        "en": "Set target production",
+        "nl": "Gewenste productie instellen"
+      },
+      "titleFormatted": {
+        "en": "Set target production to [[value]] %",
+        "nl": "Zet gewenste productie op [[value]] %"
+      },
+      "args": [
+        {
+          "type": "number",
+          "name": "value",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "placeholder": {
+            "en": "80",
+            "nl": "80"
+          },
+          "title": {
+            "en": "Production (%)",
+            "nl": "Productie (%)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "refresh",
+      "title": {
+        "en": "Refresh pool values",
+        "nl": "Zwembadwaarden verversen"
+      }
+    }
+  ]
+}

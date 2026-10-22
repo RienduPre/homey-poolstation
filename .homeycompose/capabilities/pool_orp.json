@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "ORP (redox)",
+    "nl": "Redox (ORP)"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "mV"
+  },
+  "decimals": 0,
+  "icon": "/assets/orp.svg"
+}

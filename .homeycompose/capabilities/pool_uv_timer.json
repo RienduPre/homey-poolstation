@@ -1,0 +1,17 @@
+{
+  "type": "number",
+  "title": {
+    "en": "UV lamp hours",
+    "nl": "UV-lampuren"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "units": {
+    "en": "h",
+    "nl": "u"
+  },
+  "decimals": 0,
+  "icon": "/assets/uv.svg"
+}

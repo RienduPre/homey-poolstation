@@ -1,0 +1,39 @@
+{
+  "pair": {
+    "pool": "Zwembad",
+    "login": {
+      "title": "Inloggen bij Poolstation",
+      "intro": "Log in met het e-mailadres en wachtwoord van je Poolstation-account (poolstation.net).",
+      "email": "E-mailadres",
+      "password": "Wachtwoord",
+      "code": "Inlogcode",
+      "code_intro": "Poolstation heeft een inlogcode naar je e-mail gestuurd. Vul die hieronder in.",
+      "submit": "Inloggen",
+      "busy": "Bezig met inloggen…",
+      "missing": "Vul je e-mailadres en wachtwoord in"
+    }
+  },
+  "cap": {
+    "flow_alarm": "Waterstroomprobleem",
+    "uv_ballast_alarm": "Storing UV-voorschakelapparaat",
+    "uv_fuse_alarm": "Storing UV-zekering",
+    "input": "Digitale ingang __n__"
+  },
+  "warning": {
+    "unreachable": "Poolstation is even niet bereikbaar, de laatst bekende waarden worden getoond"
+  },
+  "error": {
+    "not_logged_in": "Log eerst in",
+    "login_failed": "Inloggen mislukt: controleer je e-mailadres en wachtwoord",
+    "login_500": "Inloggen mislukt. Poolstation geeft bij een verkeerd e-mailadres of wachtwoord een serverfout terug; controleer je gegevens.",
+    "code_invalid": "De inlogcode klopt niet of is verlopen",
+    "connection": "Poolstation is niet bereikbaar",
+    "no_pools": "Geen zwembaden gevonden in dit Poolstation-account",
+    "pool_not_in_account": "Dit zwembad hoort niet bij het account waarmee je inlogde",
+    "reauth": "Je Poolstation-login is verlopen. Kies 'Repareren' bij het apparaat om opnieuw in te loggen.",
+    "reauth_2fa": "Poolstation vraagt om een inlogcode. Kies 'Repareren' bij het apparaat om opnieuw in te loggen.",
+    "write_failed": "Aanpassen bij Poolstation mislukt",
+    "not_supported": "Dit zwembad heeft deze functie niet",
+    "relay_unknown": "Dit relais is niet (meer) gevonden in Poolstation"
+  }
+}

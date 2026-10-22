@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Target ORP",
+    "nl": "Gewenste redox"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": true,
+  "uiComponent": "slider",
+  "units": {
+    "en": "mV"
+  },
+  "min": 600,
+  "max": 850,
+  "step": 1,
+  "decimals": 0,
+  "icon": "/assets/orp.svg"
+}

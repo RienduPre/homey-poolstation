@@ -1,6 +1,7 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "nl.riendupre.poolstation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "compatibility": ">=12.0.0",
   "sdk": 3,
   "platforms": [
@@ -62,5 +63,910 @@
   "source": "https://github.com/RienduPre/homey-poolstation",
   "bugs": {
     "url": "https://github.com/RienduPre/homey-poolstation/issues"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "relay_turned_on",
+        "title": {
+          "en": "A relay turned on",
+          "nl": "Een relais ging aan"
+        },
+        "titleFormatted": {
+          "en": "[[relay]] turned on",
+          "nl": "[[relay]] ging aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "relay",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "placeholder": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "relay",
+            "type": "string",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "example": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "relay_turned_off",
+        "title": {
+          "en": "A relay turned off",
+          "nl": "Een relais ging uit"
+        },
+        "titleFormatted": {
+          "en": "[[relay]] turned off",
+          "nl": "[[relay]] ging uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "relay",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "placeholder": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "relay",
+            "type": "string",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "example": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_turned_on",
+        "title": {
+          "en": "A digital input turned on",
+          "nl": "Een digitale ingang ging aan"
+        },
+        "titleFormatted": {
+          "en": "[[input]] turned on",
+          "nl": "[[input]] ging aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "input",
+            "title": {
+              "en": "Input",
+              "nl": "Ingang"
+            },
+            "placeholder": {
+              "en": "Digital input 1",
+              "nl": "Digitale ingang 1"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "input",
+            "type": "string",
+            "title": {
+              "en": "Input",
+              "nl": "Ingang"
+            },
+            "example": {
+              "en": "Pool cover",
+              "nl": "Zwembaddek"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_turned_off",
+        "title": {
+          "en": "A digital input turned off",
+          "nl": "Een digitale ingang ging uit"
+        },
+        "titleFormatted": {
+          "en": "[[input]] turned off",
+          "nl": "[[input]] ging uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "input",
+            "title": {
+              "en": "Input",
+              "nl": "Ingang"
+            },
+            "placeholder": {
+              "en": "Digital input 1",
+              "nl": "Digitale ingang 1"
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "input",
+            "type": "string",
+            "title": {
+              "en": "Input",
+              "nl": "Ingang"
+            },
+            "example": {
+              "en": "Pool cover",
+              "nl": "Zwembaddek"
+            }
+          }
+        ]
+      },
+      {
+        "id": "flow_alarm_on",
+        "title": {
+          "en": "Water flow problem started",
+          "nl": "Waterstroomprobleem begonnen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=alarm_generic.flow"
+          }
+        ]
+      },
+      {
+        "id": "flow_alarm_off",
+        "title": {
+          "en": "Water flow problem resolved",
+          "nl": "Waterstroomprobleem opgelost"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=alarm_generic.flow"
+          }
+        ]
+      },
+      {
+        "id": "ph_changed",
+        "title": {
+          "en": "The pH changed",
+          "nl": "De pH is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "ph",
+            "type": "number",
+            "title": {
+              "en": "pH",
+              "nl": "pH"
+            },
+            "example": 7.2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_ph"
+          }
+        ]
+      },
+      {
+        "id": "orp_changed",
+        "title": {
+          "en": "The ORP changed",
+          "nl": "De redox is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "orp",
+            "type": "number",
+            "title": {
+              "en": "ORP (mV)",
+              "nl": "Redox (mV)"
+            },
+            "example": 720
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_orp"
+          }
+        ]
+      },
+      {
+        "id": "chlorine_changed",
+        "title": {
+          "en": "The chlorine level changed",
+          "nl": "Het chloorgehalte is veranderd"
+        },
+        "tokens": [
+          {
+            "name": "chlorine",
+            "type": "number",
+            "title": {
+              "en": "Chlorine (ppm)",
+              "nl": "Chloor (ppm)"
+            },
+            "example": 1.2
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_chlorine"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "relay_is_on",
+        "title": {
+          "en": "Relay !{{is|is not}} on",
+          "nl": "Relais !{{is|is niet}} aan"
+        },
+        "titleFormatted": {
+          "en": "[[relay]] !{{is|is not}} on",
+          "nl": "[[relay]] !{{is|is niet}} aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "relay",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "placeholder": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "input_is_on",
+        "title": {
+          "en": "Digital input !{{is|is not}} on",
+          "nl": "Digitale ingang !{{is|is niet}} aan"
+        },
+        "titleFormatted": {
+          "en": "[[input]] !{{is|is not}} on",
+          "nl": "[[input]] !{{is|is niet}} aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "input",
+            "title": {
+              "en": "Input",
+              "nl": "Ingang"
+            },
+            "placeholder": {
+              "en": "Digital input 1",
+              "nl": "Digitale ingang 1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "flow_alarm_active",
+        "title": {
+          "en": "There !{{is|is no}} water flow problem",
+          "nl": "Er !{{is|is geen}} waterstroomprobleem"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=alarm_generic.flow"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "set_relay",
+        "title": {
+          "en": "Switch a relay",
+          "nl": "Schakel een relais"
+        },
+        "titleFormatted": {
+          "en": "Switch [[relay]] [[state]]",
+          "nl": "Zet [[relay]] [[state]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          },
+          {
+            "type": "autocomplete",
+            "name": "relay",
+            "title": {
+              "en": "Relay",
+              "nl": "Relais"
+            },
+            "placeholder": {
+              "en": "Filter pump",
+              "nl": "Filterpomp"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "state",
+            "title": {
+              "en": "State",
+              "nl": "Stand"
+            },
+            "values": [
+              {
+                "id": "on",
+                "label": {
+                  "en": "on",
+                  "nl": "aan"
+                }
+              },
+              {
+                "id": "off",
+                "label": {
+                  "en": "off",
+                  "nl": "uit"
+                }
+              },
+              {
+                "id": "toggle",
+                "label": {
+                  "en": "toggle",
+                  "nl": "om"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_target_ph",
+        "title": {
+          "en": "Set target pH",
+          "nl": "Gewenste pH instellen"
+        },
+        "titleFormatted": {
+          "en": "Set target pH to [[value]]",
+          "nl": "Zet gewenste pH op [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_target_ph"
+          },
+          {
+            "type": "number",
+            "name": "value",
+            "min": 6,
+            "max": 8,
+            "step": 0.01,
+            "placeholder": {
+              "en": "7.2",
+              "nl": "7.2"
+            },
+            "title": {
+              "en": "pH",
+              "nl": "pH"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_target_orp",
+        "title": {
+          "en": "Set target ORP",
+          "nl": "Gewenste redox instellen"
+        },
+        "titleFormatted": {
+          "en": "Set target ORP to [[value]] mV",
+          "nl": "Zet gewenste redox op [[value]] mV"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_target_orp"
+          },
+          {
+            "type": "number",
+            "name": "value",
+            "min": 600,
+            "max": 850,
+            "step": 1,
+            "placeholder": {
+              "en": "720",
+              "nl": "720"
+            },
+            "title": {
+              "en": "ORP (mV)",
+              "nl": "Redox (mV)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_target_chlorine",
+        "title": {
+          "en": "Set target chlorine",
+          "nl": "Gewenst chloor instellen"
+        },
+        "titleFormatted": {
+          "en": "Set target chlorine to [[value]] ppm",
+          "nl": "Zet gewenst chloor op [[value]] ppm"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_target_chlorine"
+          },
+          {
+            "type": "number",
+            "name": "value",
+            "min": 0.3,
+            "max": 3.5,
+            "step": 0.01,
+            "placeholder": {
+              "en": "1.0",
+              "nl": "1.0"
+            },
+            "title": {
+              "en": "Chlorine (ppm)",
+              "nl": "Chloor (ppm)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "set_target_production",
+        "title": {
+          "en": "Set target production",
+          "nl": "Gewenste productie instellen"
+        },
+        "titleFormatted": {
+          "en": "Set target production to [[value]] %",
+          "nl": "Zet gewenste productie op [[value]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool&capabilities=pool_target_production"
+          },
+          {
+            "type": "number",
+            "name": "value",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "placeholder": {
+              "en": "80",
+              "nl": "80"
+            },
+            "title": {
+              "en": "Production (%)",
+              "nl": "Productie (%)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "refresh",
+        "title": {
+          "en": "Refresh pool values",
+          "nl": "Zwembadwaarden verversen"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=pool"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Pool",
+        "nl": "Zwembad"
+      },
+      "class": "other",
+      "capabilities": [
+        "measure_temperature",
+        "pool_ph",
+        "pool_target_ph"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/pool/assets/images/small.png",
+        "large": "/drivers/pool/assets/images/large.png",
+        "xlarge": "/drivers/pool/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection",
+            "nl": "Verbinding"
+          },
+          "children": [
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "value": 60,
+              "min": 30,
+              "max": 3600,
+              "step": 1,
+              "units": {
+                "en": "s",
+                "nl": "s"
+              },
+              "label": {
+                "en": "Update interval",
+                "nl": "Verversinterval"
+              },
+              "hint": {
+                "en": "How often the pool values are read from Poolstation (minimum 30 seconds).",
+                "nl": "Hoe vaak de zwembadwaarden bij Poolstation worden opgehaald (minimaal 30 seconden)."
+              }
+            },
+            {
+              "id": "pool_id",
+              "type": "label",
+              "value": "",
+              "label": {
+                "en": "Pool ID",
+                "nl": "Zwembad-ID"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "pool"
+    }
+  ],
+  "capabilities": {
+    "pool_chlorine": {
+      "type": "number",
+      "title": {
+        "en": "Free chlorine",
+        "nl": "Vrij chloor"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "ppm"
+      },
+      "decimals": 2,
+      "icon": "/assets/chlorine.svg"
+    },
+    "pool_electrolysis": {
+      "type": "number",
+      "title": {
+        "en": "Electrolysis",
+        "nl": "Elektrolyse"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "%"
+      },
+      "decimals": 0,
+      "min": 0,
+      "max": 100,
+      "icon": "/assets/electrolysis.svg"
+    },
+    "pool_input": {
+      "type": "boolean",
+      "title": {
+        "en": "Digital input",
+        "nl": "Digitale ingang"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Input on",
+        "nl": "Ingang aan"
+      },
+      "insightsTitleFalse": {
+        "en": "Input off",
+        "nl": "Ingang uit"
+      },
+      "icon": "/assets/input.svg"
+    },
+    "pool_orp": {
+      "type": "number",
+      "title": {
+        "en": "ORP (redox)",
+        "nl": "Redox (ORP)"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "mV"
+      },
+      "decimals": 0,
+      "icon": "/assets/orp.svg"
+    },
+    "pool_ph": {
+      "type": "number",
+      "title": {
+        "en": "pH",
+        "nl": "pH"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "decimals": 2,
+      "icon": "/assets/ph.svg"
+    },
+    "pool_salt": {
+      "type": "number",
+      "title": {
+        "en": "Salt",
+        "nl": "Zout"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "g/l"
+      },
+      "decimals": 1,
+      "icon": "/assets/salt.svg"
+    },
+    "pool_target_chlorine": {
+      "type": "number",
+      "title": {
+        "en": "Target chlorine",
+        "nl": "Gewenst chloor"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "uiComponent": "slider",
+      "units": {
+        "en": "ppm"
+      },
+      "min": 0.3,
+      "max": 3.5,
+      "step": 0.01,
+      "decimals": 2,
+      "icon": "/assets/chlorine.svg"
+    },
+    "pool_target_orp": {
+      "type": "number",
+      "title": {
+        "en": "Target ORP",
+        "nl": "Gewenste redox"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "uiComponent": "slider",
+      "units": {
+        "en": "mV"
+      },
+      "min": 600,
+      "max": 850,
+      "step": 1,
+      "decimals": 0,
+      "icon": "/assets/orp.svg"
+    },
+    "pool_target_ph": {
+      "type": "number",
+      "title": {
+        "en": "Target pH",
+        "nl": "Gewenste pH"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "uiComponent": "slider",
+      "min": 6,
+      "max": 8,
+      "step": 0.01,
+      "decimals": 2,
+      "icon": "/assets/ph.svg"
+    },
+    "pool_target_production": {
+      "type": "number",
+      "title": {
+        "en": "Target production",
+        "nl": "Gewenste productie"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "uiComponent": "slider",
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "decimals": 0,
+      "icon": "/assets/electrolysis.svg"
+    },
+    "pool_uv_available": {
+      "type": "boolean",
+      "title": {
+        "en": "UV available",
+        "nl": "UV beschikbaar"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/uv.svg"
+    },
+    "pool_uv_enabled": {
+      "type": "boolean",
+      "title": {
+        "en": "UV enabled",
+        "nl": "UV ingeschakeld"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/uv.svg"
+    },
+    "pool_uv_on": {
+      "type": "boolean",
+      "title": {
+        "en": "UV lamp on",
+        "nl": "UV-lamp aan"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "UV lamp on",
+        "nl": "UV-lamp aan"
+      },
+      "insightsTitleFalse": {
+        "en": "UV lamp off",
+        "nl": "UV-lamp uit"
+      },
+      "icon": "/assets/uv.svg"
+    },
+    "pool_uv_timer": {
+      "type": "number",
+      "title": {
+        "en": "UV lamp hours",
+        "nl": "UV-lampuren"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "h",
+        "nl": "u"
+      },
+      "decimals": 0,
+      "icon": "/assets/uv.svg"
+    },
+    "pool_uv_total": {
+      "type": "number",
+      "title": {
+        "en": "UV total hours",
+        "nl": "UV-uren totaal"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "units": {
+        "en": "h",
+        "nl": "u"
+      },
+      "decimals": 0,
+      "icon": "/assets/uv.svg"
+    }
   }
 }
